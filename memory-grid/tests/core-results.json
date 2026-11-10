@@ -1,0 +1,346 @@
+{
+  "passed": 85,
+  "total": 85,
+  "results": [
+    {
+      "name": "Nine distinct shapes are exposed",
+      "passed": true
+    },
+    {
+      "name": "Shapes are unique",
+      "passed": true
+    },
+    {
+      "name": "Every shape has a label",
+      "passed": true
+    },
+    {
+      "name": "Shape labels are unique",
+      "passed": true
+    },
+    {
+      "name": "Tile count matches the shape count",
+      "passed": true
+    },
+    {
+      "name": "Round one uses three tiles",
+      "passed": true
+    },
+    {
+      "name": "Round two uses four tiles",
+      "passed": true
+    },
+    {
+      "name": "Sequence length grows one tile per round",
+      "passed": true
+    },
+    {
+      "name": "Sequence length is capped at nine",
+      "passed": true
+    },
+    {
+      "name": "Maximum sequence length is nine",
+      "passed": true
+    },
+    {
+      "name": "There are seven rounds",
+      "passed": true
+    },
+    {
+      "name": "Generated sequence has the requested length",
+      "passed": true
+    },
+    {
+      "name": "Generated sequence length is capped",
+      "passed": true
+    },
+    {
+      "name": "Generated tiles stay inside the grid",
+      "passed": true
+    },
+    {
+      "name": "Generated sequence never repeats a tile twice in a row",
+      "passed": true
+    },
+    {
+      "name": "A constant generator still avoids repeats",
+      "passed": true
+    },
+    {
+      "name": "Generation is deterministic for a fixed generator",
+      "passed": true
+    },
+    {
+      "name": "Random tile is always in range",
+      "passed": true
+    },
+    {
+      "name": "Extended sequence adds exactly one tile",
+      "passed": true
+    },
+    {
+      "name": "Extended sequence never repeats the last tile",
+      "passed": true
+    },
+    {
+      "name": "Extended sequence keeps the earlier tiles",
+      "passed": true
+    },
+    {
+      "name": "Extended sequence stays in range",
+      "passed": true
+    },
+    {
+      "name": "Fresh state starts on the title screen",
+      "passed": true
+    },
+    {
+      "name": "Fresh state starts at round one",
+      "passed": true
+    },
+    {
+      "name": "Fresh state has no puzzle",
+      "passed": true
+    },
+    {
+      "name": "Fresh state counts no games",
+      "passed": true
+    },
+    {
+      "name": "Fresh state has no shared mutable references",
+      "passed": true
+    },
+    {
+      "name": "Fresh state carries the version",
+      "passed": true
+    },
+    {
+      "name": "Start game builds a three tile puzzle",
+      "passed": true
+    },
+    {
+      "name": "Start game enters the preview state",
+      "passed": true
+    },
+    {
+      "name": "Start game clears progress and cursor",
+      "passed": true
+    },
+    {
+      "name": "Start game keeps best round and games played",
+      "passed": true
+    },
+    {
+      "name": "Leaving to the title clears the puzzle",
+      "passed": true
+    },
+    {
+      "name": "Leaving to the title keeps the stats",
+      "passed": true
+    },
+    {
+      "name": "Input is ignored outside the player turn",
+      "passed": true
+    },
+    {
+      "name": "Input is ignored during the preview",
+      "passed": true
+    },
+    {
+      "name": "Input is ignored after the game is over",
+      "passed": true
+    },
+    {
+      "name": "Input rejects tiles outside the grid",
+      "passed": true
+    },
+    {
+      "name": "A correct tile is recorded",
+      "passed": true
+    },
+    {
+      "name": "A wrong tile ends the game",
+      "passed": true
+    },
+    {
+      "name": "A wrong tile is not recorded",
+      "passed": true
+    },
+    {
+      "name": "A wrong tile counts the game",
+      "passed": true
+    },
+    {
+      "name": "A wrong tile records the round reached",
+      "passed": true
+    },
+    {
+      "name": "A wrong tile never lowers the best round",
+      "passed": true
+    },
+    {
+      "name": "Finishing a round advances to the next one",
+      "passed": true
+    },
+    {
+      "name": "Finishing a round grows the sequence by one",
+      "passed": true
+    },
+    {
+      "name": "Finishing a round clears the entered tiles",
+      "passed": true
+    },
+    {
+      "name": "Finishing a round returns to the preview",
+      "passed": true
+    },
+    {
+      "name": "Finishing a round keeps the earlier shapes",
+      "passed": true
+    },
+    {
+      "name": "Finishing a round records the best round",
+      "passed": true
+    },
+    {
+      "name": "Cursor moves forward one tile",
+      "passed": true
+    },
+    {
+      "name": "Cursor moves backward one tile",
+      "passed": true
+    },
+    {
+      "name": "Cursor stops at the first tile",
+      "passed": true
+    },
+    {
+      "name": "Cursor stops at the last tile",
+      "passed": true
+    },
+    {
+      "name": "Cursor is set directly",
+      "passed": true
+    },
+    {
+      "name": "Direct cursor setting is clamped",
+      "passed": true
+    },
+    {
+      "name": "Stats report the round reached",
+      "passed": true
+    },
+    {
+      "name": "Stats copy the sequence",
+      "passed": true
+    },
+    {
+      "name": "Stats copy the entered tiles",
+      "passed": true
+    },
+    {
+      "name": "Validate accepts a fresh game",
+      "passed": true
+    },
+    {
+      "name": "Validate accepts a preview state",
+      "passed": true
+    },
+    {
+      "name": "Validate accepts an input state",
+      "passed": true
+    },
+    {
+      "name": "Validate accepts a game over state",
+      "passed": true
+    },
+    {
+      "name": "Validate accepts a winning state",
+      "passed": true
+    },
+    {
+      "name": "Validate rejects a missing game",
+      "passed": true
+    },
+    {
+      "name": "Validate rejects the wrong version",
+      "passed": true
+    },
+    {
+      "name": "Validate rejects an unknown status",
+      "passed": true
+    },
+    {
+      "name": "Validate rejects a round out of range",
+      "passed": true
+    },
+    {
+      "name": "Validate rejects a round below one",
+      "passed": true
+    },
+    {
+      "name": "Validate rejects a bad best round",
+      "passed": true
+    },
+    {
+      "name": "Validate rejects negative games played",
+      "passed": true
+    },
+    {
+      "name": "Validate rejects a missing puzzle",
+      "passed": true
+    },
+    {
+      "name": "Validate rejects a tile outside the grid",
+      "passed": true
+    },
+    {
+      "name": "Validate rejects a repeated tile in the sequence",
+      "passed": true
+    },
+    {
+      "name": "Validate rejects entered tiles that do not match",
+      "passed": true
+    },
+    {
+      "name": "Validate rejects too many entered tiles",
+      "passed": true
+    },
+    {
+      "name": "Validate rejects a sequence that does not match the round",
+      "passed": true
+    },
+    {
+      "name": "Validate rejects a title state holding a puzzle",
+      "passed": true
+    },
+    {
+      "name": "Validate rejects a preview state with entered tiles",
+      "passed": true
+    },
+    {
+      "name": "Validate rejects a win outside the last round",
+      "passed": true
+    },
+    {
+      "name": "Validate rejects a bad cursor",
+      "passed": true
+    },
+    {
+      "name": "Validate returns copies of the puzzle",
+      "passed": true
+    },
+    {
+      "name": "Round trip serialization keeps the state",
+      "passed": true
+    },
+    {
+      "name": "A perfect game reaches the last round and wins",
+      "passed": true
+    },
+    {
+      "name": "A lost game reports the round reached",
+      "passed": true
+    }
+  ]
+}

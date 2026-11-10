@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="light dark"><title>Golden Hour</title><link rel="stylesheet" href="style.css"><script src="core.js" defer></script><script src="app.js" defer></script></head>
+<body><main id="app" aria-busy="true">
+<header><div class="head-top"><h1 id="place-name">Manhattan, IL</h1><button id="places-open" aria-label="Choose location">Places</button></div><div class="head-bottom"><span id="selected-date">Loading</span><span id="day-position">1 / 14</span></div></header>
+<div id="day-list" role="listbox" aria-label="Days" tabindex="0" aria-activedescendant="day-0"></div>
+<div id="detail" aria-label="Golden and blue hour" aria-live="polite">
+<div class="detail-row golden"><span class="k">Golden AM</span><span class="v" id="golden-am">--</span></div>
+<div class="detail-row golden"><span class="k">Golden PM</span><span class="v" id="golden-pm">--</span></div>
+<div class="detail-row blue"><span class="k">Blue AM</span><span class="v" id="blue-am">--</span></div>
+<div class="detail-row blue"><span class="k">Blue PM</span><span class="v" id="blue-pm">--</span></div>
+</div>
+<footer><span id="save-state" role="status">Loading...</span><button id="retry-save" hidden>Save again</button><span id="input-hint">Wheel / click</span></footer>
+<section id="places" role="dialog" aria-modal="true" aria-labelledby="places-title" hidden><div class="overlay-header"><h2 id="places-title">Choose a location</h2><button id="places-close">Cancel</button></div><div id="place-list" role="listbox" aria-label="Locations" tabindex="0" aria-activedescendant="place-manhattan-il"></div><p class="hint">Wheel moves. Side click or Enter chooses. Esc cancels.</p><div class="menu-row"><button id="places-save">Save again</button><button id="exit">Exit</button></div></section>
+<section id="day-card" role="dialog" aria-modal="true" aria-labelledby="card-title" hidden><div class="overlay-header"><h2 id="card-title">Day</h2><button id="card-close">Close</button></div><p id="card-place" class="card-place">Manhattan, IL</p><dl class="card-list"><div class="card-row"><dt>Sunrise</dt><dd id="card-sunrise">--</dd></div><div class="card-row"><dt>Golden hour AM</dt><dd id="card-golden-am">--</dd></div><div class="card-row"><dt>Solar noon</dt><dd id="card-noon">--</dd></div><div class="card-row"><dt>Golden hour PM</dt><dd id="card-golden-pm">--</dd></div><div class="card-row"><dt>Sunset</dt><dd id="card-sunset">--</dd></div><div class="card-row blue"><dt>Blue hour AM</dt><dd id="card-blue-am">--</dd></div><div class="card-row blue"><dt>Blue hour PM</dt><dd id="card-blue-pm">--</dd></div></dl><p class="card-note">Local time at the location. Golden hour is sun between -4 and +6 degrees, blue hour between -6 and -4.</p></section>
+</main></body></html>

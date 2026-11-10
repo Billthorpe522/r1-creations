@@ -1,0 +1,386 @@
+{
+  "passed": 95,
+  "total": 95,
+  "results": [
+    {
+      "name": "Six locations with unique ids",
+      "passed": true
+    },
+    {
+      "name": "Location coordinates are plausible",
+      "passed": true
+    },
+    {
+      "name": "Every location has a known timezone rule",
+      "passed": true
+    },
+    {
+      "name": "Plan covers fourteen days",
+      "passed": true
+    },
+    {
+      "name": "Julian day at the J2000 epoch",
+      "passed": true
+    },
+    {
+      "name": "Julian day matches UTC epoch arithmetic",
+      "passed": true
+    },
+    {
+      "name": "Julian century is zero at J2000",
+      "passed": true
+    },
+    {
+      "name": "Declination is near zero at the March equinox",
+      "passed": true
+    },
+    {
+      "name": "Declination is near +23.44 at the June solstice",
+      "passed": true
+    },
+    {
+      "name": "Declination is near -23.44 at the December solstice",
+      "passed": true
+    },
+    {
+      "name": "Equation of time crosses zero in mid April",
+      "passed": true
+    },
+    {
+      "name": "Equation of time crosses zero in mid June",
+      "passed": true
+    },
+    {
+      "name": "Equation of time crosses zero in early September",
+      "passed": true
+    },
+    {
+      "name": "Equation of time is near its February minimum",
+      "passed": true
+    },
+    {
+      "name": "Equation of time is near its November maximum",
+      "passed": true
+    },
+    {
+      "name": "Sun eccentricity is near 0.0167",
+      "passed": true
+    },
+    {
+      "name": "Mean longitude advances about one degree a day",
+      "passed": true
+    },
+    {
+      "name": "Hour angle is undefined when the sun never reaches the altitude",
+      "passed": true
+    },
+    {
+      "name": "Hour angle shrinks as the altitude rises",
+      "passed": true
+    },
+    {
+      "name": "Second Sunday in March 2026 is March 8",
+      "passed": true
+    },
+    {
+      "name": "First Sunday in November 2026 is November 1",
+      "passed": true
+    },
+    {
+      "name": "Second Sunday in March 2027 is March 14",
+      "passed": true
+    },
+    {
+      "name": "First Sunday in November 2027 is November 7",
+      "passed": true
+    },
+    {
+      "name": "Nth Sunday always lands on a Sunday",
+      "passed": true
+    },
+    {
+      "name": "DST runs from the second Sunday in March to the first Sunday in November",
+      "passed": true
+    },
+    {
+      "name": "Chicago switches to daylight time on the second Sunday in March",
+      "passed": true
+    },
+    {
+      "name": "Chicago switches back on the first Sunday in November",
+      "passed": true
+    },
+    {
+      "name": "Phoenix never observes daylight saving",
+      "passed": true
+    },
+    {
+      "name": "Zone offsets match the IANA standard offsets",
+      "passed": true
+    },
+    {
+      "name": "Zone abbreviations report daylight and standard time",
+      "passed": true
+    },
+    {
+      "name": "Unknown timezone is rejected",
+      "passed": true
+    },
+    {
+      "name": "Sunrise and sunset match the reference within two minutes: chicago-il 2026-6-21",
+      "passed": true
+    },
+    {
+      "name": "Sunrise and sunset match the reference within two minutes: chicago-il 2026-12-21",
+      "passed": true
+    },
+    {
+      "name": "Sunrise and sunset match the reference within two minutes: chicago-il 2026-11-10",
+      "passed": true
+    },
+    {
+      "name": "Sunrise and sunset match the reference within two minutes: manhattan-il 2026-6-21",
+      "passed": true
+    },
+    {
+      "name": "Sunrise and sunset match the reference within two minutes: manhattan-il 2026-12-21",
+      "passed": true
+    },
+    {
+      "name": "Sunrise and sunset match the reference within two minutes: manhattan-il 2026-11-10",
+      "passed": true
+    },
+    {
+      "name": "Sunrise and sunset match the reference within two minutes: los-angeles-ca 2026-6-21",
+      "passed": true
+    },
+    {
+      "name": "Sunrise and sunset match the reference within two minutes: los-angeles-ca 2026-12-21",
+      "passed": true
+    },
+    {
+      "name": "Sunrise and sunset match the reference within two minutes: phoenix-az 2026-6-21",
+      "passed": true
+    },
+    {
+      "name": "Sunrise and sunset match the reference within two minutes: phoenix-az 2026-12-21",
+      "passed": true
+    },
+    {
+      "name": "Sunrise and sunset match the reference within two minutes: new-york-ny 2026-6-21",
+      "passed": true
+    },
+    {
+      "name": "Sunrise and sunset match the reference within two minutes: new-york-ny 2026-12-21",
+      "passed": true
+    },
+    {
+      "name": "Sunrise and sunset match the reference within two minutes: nashville-tn 2026-6-21",
+      "passed": true
+    },
+    {
+      "name": "Sunrise and sunset match the reference within two minutes: chicago-il 2026-3-8",
+      "passed": true
+    },
+    {
+      "name": "Sunrise and sunset match the reference within two minutes: chicago-il 2026-11-1",
+      "passed": true
+    },
+    {
+      "name": "Every reference row is within one minute of the published values",
+      "passed": true
+    },
+    {
+      "name": "Sunrise, noon and sunset are ordered at Manhattan, IL",
+      "passed": true
+    },
+    {
+      "name": "Golden and blue hour windows are ordered at Manhattan, IL",
+      "passed": true
+    },
+    {
+      "name": "Local times equal UTC plus the zone offset at Manhattan, IL",
+      "passed": true
+    },
+    {
+      "name": "A summer day is longer than a winter day at Manhattan, IL",
+      "passed": true
+    },
+    {
+      "name": "Sunrise, noon and sunset are ordered at Chicago, IL",
+      "passed": true
+    },
+    {
+      "name": "Golden and blue hour windows are ordered at Chicago, IL",
+      "passed": true
+    },
+    {
+      "name": "Local times equal UTC plus the zone offset at Chicago, IL",
+      "passed": true
+    },
+    {
+      "name": "A summer day is longer than a winter day at Chicago, IL",
+      "passed": true
+    },
+    {
+      "name": "Sunrise, noon and sunset are ordered at Nashville, TN",
+      "passed": true
+    },
+    {
+      "name": "Golden and blue hour windows are ordered at Nashville, TN",
+      "passed": true
+    },
+    {
+      "name": "Local times equal UTC plus the zone offset at Nashville, TN",
+      "passed": true
+    },
+    {
+      "name": "A summer day is longer than a winter day at Nashville, TN",
+      "passed": true
+    },
+    {
+      "name": "Sunrise, noon and sunset are ordered at Phoenix, AZ",
+      "passed": true
+    },
+    {
+      "name": "Golden and blue hour windows are ordered at Phoenix, AZ",
+      "passed": true
+    },
+    {
+      "name": "Local times equal UTC plus the zone offset at Phoenix, AZ",
+      "passed": true
+    },
+    {
+      "name": "A summer day is longer than a winter day at Phoenix, AZ",
+      "passed": true
+    },
+    {
+      "name": "Sunrise, noon and sunset are ordered at Los Angeles, CA",
+      "passed": true
+    },
+    {
+      "name": "Golden and blue hour windows are ordered at Los Angeles, CA",
+      "passed": true
+    },
+    {
+      "name": "Local times equal UTC plus the zone offset at Los Angeles, CA",
+      "passed": true
+    },
+    {
+      "name": "A summer day is longer than a winter day at Los Angeles, CA",
+      "passed": true
+    },
+    {
+      "name": "Sunrise, noon and sunset are ordered at New York, NY",
+      "passed": true
+    },
+    {
+      "name": "Golden and blue hour windows are ordered at New York, NY",
+      "passed": true
+    },
+    {
+      "name": "Local times equal UTC plus the zone offset at New York, NY",
+      "passed": true
+    },
+    {
+      "name": "A summer day is longer than a winter day at New York, NY",
+      "passed": true
+    },
+    {
+      "name": "Chicago summer sunrise matches the published local time",
+      "passed": true
+    },
+    {
+      "name": "Phoenix keeps the same offset through summer and winter",
+      "passed": true
+    },
+    {
+      "name": "Golden hour is longer than blue hour",
+      "passed": true
+    },
+    {
+      "name": "Day events expose the offset used for that date",
+      "passed": true
+    },
+    {
+      "name": "Plan starts today and covers fourteen consecutive days",
+      "passed": true
+    },
+    {
+      "name": "Plan days advance one weekday at a time",
+      "passed": true
+    },
+    {
+      "name": "Plan rows carry computed events",
+      "passed": true
+    },
+    {
+      "name": "Add days crosses month and year boundaries",
+      "passed": true
+    },
+    {
+      "name": "Midnight and noon use the 12 hour clock",
+      "passed": true
+    },
+    {
+      "name": "Missing times render as a dash",
+      "passed": true
+    },
+    {
+      "name": "Rounding never produces a 60th minute",
+      "passed": true
+    },
+    {
+      "name": "Compact times use a lower case suffix",
+      "passed": true
+    },
+    {
+      "name": "Windows read as a range",
+      "passed": true
+    },
+    {
+      "name": "Dates format with weekday and month",
+      "passed": true
+    },
+    {
+      "name": "Fresh state is versioned and valid",
+      "passed": true
+    },
+    {
+      "name": "Fresh states do not share references",
+      "passed": true
+    },
+    {
+      "name": "Wrong version is rejected",
+      "passed": true
+    },
+    {
+      "name": "Unknown location is rejected",
+      "passed": true
+    },
+    {
+      "name": "Out of range day index is rejected",
+      "passed": true
+    },
+    {
+      "name": "Missing state is rejected",
+      "passed": true
+    },
+    {
+      "name": "Move clamps at both ends of the list",
+      "passed": true
+    },
+    {
+      "name": "Selecting a location keeps the day index",
+      "passed": true
+    },
+    {
+      "name": "Selecting an unknown location throws",
+      "passed": true
+    },
+    {
+      "name": "Roundtrip serialization survives validation",
+      "passed": true
+    }
+  ]
+}
