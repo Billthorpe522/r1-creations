@@ -1,0 +1,198 @@
+{
+  "suite": "browser-smoke",
+  "viewport": "240x282",
+  "storage": "browser localStorage emulation",
+  "note": "Native hardware events emulated. No physical-R1 claim.",
+  "passed": 47,
+  "total": 47,
+  "results": [
+    {
+      "name": "Ready after initialization",
+      "passed": true
+    },
+    {
+      "name": "Title panel visible on load",
+      "passed": true
+    },
+    {
+      "name": "Grid hidden on the title screen",
+      "passed": true
+    },
+    {
+      "name": "Start control offered on the title",
+      "passed": true
+    },
+    {
+      "name": "Title shows best round and games played",
+      "passed": true
+    },
+    {
+      "name": "Nine tiles rendered",
+      "passed": true
+    },
+    {
+      "name": "Every tile has a distinct shape",
+      "passed": true
+    },
+    {
+      "name": "Every tile has an accessible label",
+      "passed": true
+    },
+    {
+      "name": "Grid exposes listbox semantics",
+      "passed": true
+    },
+    {
+      "name": "Start begins round one",
+      "passed": true
+    },
+    {
+      "name": "Round one uses three shapes",
+      "passed": true
+    },
+    {
+      "name": "Preview finishes before the player turn",
+      "passed": true
+    },
+    {
+      "name": "Round one showed three shapes in order",
+      "passed": true
+    },
+    {
+      "name": "Cursor starts on the first tile",
+      "passed": true
+    },
+    {
+      "name": "Wheel down moves the cursor forward",
+      "passed": true
+    },
+    {
+      "name": "Wheel up moves the cursor back",
+      "passed": true
+    },
+    {
+      "name": "Cursor stops at the last tile",
+      "passed": true
+    },
+    {
+      "name": "Cursor stops at the first tile",
+      "passed": true
+    },
+    {
+      "name": "Arrow down moves the cursor",
+      "passed": true
+    },
+    {
+      "name": "Arrow up moves the cursor back",
+      "passed": true
+    },
+    {
+      "name": "Correct pick flashes green",
+      "passed": true
+    },
+    {
+      "name": "Duplicate side clicks are ignored",
+      "passed": true
+    },
+    {
+      "name": "Correct picks advance the round",
+      "passed": true
+    },
+    {
+      "name": "Round two adds a shape",
+      "passed": true
+    },
+    {
+      "name": "Round two previews before the player turn",
+      "passed": true
+    },
+    {
+      "name": "Round two showed four shapes in order",
+      "passed": true
+    },
+    {
+      "name": "Correct pick in round two is recorded",
+      "passed": true
+    },
+    {
+      "name": "Enter picks the shape under the cursor",
+      "passed": true
+    },
+    {
+      "name": "Wrong pick ends the game",
+      "passed": true
+    },
+    {
+      "name": "Game over shows the round reached",
+      "passed": true
+    },
+    {
+      "name": "Game over shows the best round",
+      "passed": true
+    },
+    {
+      "name": "Game over shows games played",
+      "passed": true
+    },
+    {
+      "name": "Background controls are inert while the game over screen is open",
+      "passed": true
+    },
+    {
+      "name": "Saved state validates",
+      "passed": true
+    },
+    {
+      "name": "Saved state keeps the puzzle and progress",
+      "passed": true
+    },
+    {
+      "name": "Replay closes the game over screen",
+      "passed": true
+    },
+    {
+      "name": "Missed shapes can be replayed",
+      "passed": true
+    },
+    {
+      "name": "Replay returns to the game over screen",
+      "passed": true
+    },
+    {
+      "name": "Play again starts a fresh round one",
+      "passed": true
+    },
+    {
+      "name": "Menu opens over the board",
+      "passed": true
+    },
+    {
+      "name": "Background controls are inert while the menu is open",
+      "passed": true
+    },
+    {
+      "name": "Exit control is offered",
+      "passed": true
+    },
+    {
+      "name": "Escape closes the menu",
+      "passed": true
+    },
+    {
+      "name": "Leaving a round asks for confirmation",
+      "passed": true
+    },
+    {
+      "name": "Keeping the round preserves it",
+      "passed": true
+    },
+    {
+      "name": "Save status is honest",
+      "passed": true
+    },
+    {
+      "name": "Latest queued save persisted",
+      "passed": true
+    }
+  ]
+}

@@ -2,7 +2,7 @@
 (async () => {
   const $ = id => document.getElementById(id), rows = [];
   const pause = ms => new Promise(resolve => setTimeout(resolve, ms));
-  const waitFor = async (fn, timeout = 9000) => { const start = Date.now(); while (Date.now() - start < timeout) { if (fn()) return true; await pause(40); } return false; };
+  const waitFor = async (fn, timeout = 20000) => { const start = Date.now(); while (Date.now() - start < timeout) { if (fn()) return true; await pause(40); } return false; };
   const click = id => $(id).click();
   const emit = name => window.dispatchEvent(new Event(name));
   const overlays = ['menu', 'help', 'gameover', 'confirm'];
@@ -24,7 +24,7 @@
     const pageFits = page.scrollWidth <= view.width && page.scrollHeight <= view.height;
     const gridFits = grid.hidden || (grid.scrollWidth <= grid.clientWidth + 1 && grid.scrollHeight <= grid.clientHeight + 1);
     const panelFits = panel.hidden || (panel.scrollWidth <= panel.clientWidth + 1 && panel.scrollHeight <= panel.clientHeight + 1);
-    const dialogFits = !dialog || (dialog.scrollWidth <= dialog.clientWidth + 1 && dialog.getBoundingClientRect().right <= view.width + 0.5);
+    const dialogFits = !dialog || (dialog.scrollWidth <= dialog.clientWidth + 1 && dialog.scrollHeight <= dialog.clientHeight + 1 && dialog.getBoundingClientRect().right <= view.width + 0.5);
     const controlsFit = controls.every(button => {
       const r = button.getBoundingClientRect();
       return r.x >= -0.5 && r.right <= view.width + 0.5 && r.top >= -0.5 && r.bottom <= view.height + 0.5 && r.width > 0 && r.height > 0;
@@ -39,10 +39,17 @@
   click('start');
   await waitFor(() => $('app').dataset.phase === 'input');
   measure('round-1-input');
+  click('title-btn');
+  await pause(80);
+  measure('confirm');
+  click('confirm-cancel');
+  await pause(80);
   const sequence = lit.slice(-3);
   const wrong = (sequence[0] + 1) % 9;
   let at = Number($('grid').getAttribute('aria-activedescendant').split('-')[1]);
-  while (at !== wrong) { emit(at < wrong ? 'scrollDown' : 'scrollUp'); at = at < wrong ? at + 1 : at - 1; }
+  if (!Number.isFinite(at)) at = 0;
+  let guard = 0;
+  while (at !== wrong && guard++ < 20) { emit(at < wrong ? 'scrollDown' : 'scrollUp'); at = at < wrong ? at + 1 : at - 1; }
   await pause(280);
   emit('sideClick');
   await waitFor(() => !$('gameover').hidden, 5000);

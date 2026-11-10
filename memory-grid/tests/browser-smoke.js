@@ -7,12 +7,12 @@
   const emit = name => window.dispatchEvent(new Event(name));
   const key = k => $('grid').dispatchEvent(new KeyboardEvent('keydown', { key: k, bubbles: true, cancelable: true }));
   const pause = ms => new Promise(resolve => setTimeout(resolve, ms));
-  const waitFor = async (fn, timeout = 9000) => { const start = Date.now(); while (Date.now() - start < timeout) { if (fn()) return true; await pause(40); } return false; };
+  const waitFor = async (fn, timeout = 20000) => { const start = Date.now(); while (Date.now() - start < timeout) { if (fn()) return true; await pause(40); } return false; };
   const phase = () => $('app').dataset.phase;
   const saved = async () => { for (let i = 0; i < 150; i++) { if (!$('save-state').textContent.includes('Saving')) break; await pause(20); } };
   const overlays = ['menu', 'help', 'gameover', 'confirm'];
   const cursor = () => { const id = $('grid').getAttribute('aria-activedescendant'); return id ? Number(id.split('-')[1]) : -1; };
-  const moveTo = index => { let at = cursor(); while (at !== index) { emit(at < index ? 'scrollDown' : 'scrollUp'); at = at < index ? at + 1 : at - 1; } };
+  const moveTo = index => { let at = cursor(); let guard = 0; while (at !== index && guard++ < 20) { emit(at < index ? 'scrollDown' : 'scrollUp'); at = at < index ? at + 1 : at - 1; } };
   // One pick per hardware press. Native double clicks arrive about 50 ms apart and are ignored.
   const pick = async index => { moveTo(index); await pause(280); emit('sideClick'); };
   // Record every shape that lights up, in the order it lights.

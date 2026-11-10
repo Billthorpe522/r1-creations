@@ -1,0 +1,130 @@
+{
+  "suite": "browser-layout",
+  "viewport": "240x282",
+  "light": {
+    "rows": [
+      {
+        "screen": "title",
+        "pageFits": true,
+        "gridFits": true,
+        "panelFits": true,
+        "dialogFits": true,
+        "controlsFit": true,
+        "overflow": false
+      },
+      {
+        "screen": "round-1-input",
+        "pageFits": true,
+        "gridFits": true,
+        "panelFits": true,
+        "dialogFits": true,
+        "controlsFit": true,
+        "overflow": false
+      },
+      {
+        "screen": "confirm",
+        "pageFits": true,
+        "gridFits": true,
+        "panelFits": true,
+        "dialogFits": true,
+        "controlsFit": true,
+        "overflow": false
+      },
+      {
+        "screen": "game-over",
+        "pageFits": true,
+        "gridFits": true,
+        "panelFits": true,
+        "dialogFits": true,
+        "controlsFit": true,
+        "overflow": false
+      },
+      {
+        "screen": "menu",
+        "pageFits": true,
+        "gridFits": true,
+        "panelFits": true,
+        "dialogFits": true,
+        "controlsFit": true,
+        "overflow": false
+      },
+      {
+        "screen": "help",
+        "pageFits": true,
+        "gridFits": true,
+        "panelFits": true,
+        "dialogFits": true,
+        "controlsFit": true,
+        "overflow": false
+      }
+    ],
+    "overflowRows": 0,
+    "pageScrollWidth": {
+      "sw": 240,
+      "sh": 282
+    }
+  },
+  "dark": {
+    "rows": [
+      {
+        "screen": "title",
+        "pageFits": true,
+        "gridFits": true,
+        "panelFits": true,
+        "dialogFits": true,
+        "controlsFit": true,
+        "overflow": false
+      },
+      {
+        "screen": "round-1-input",
+        "pageFits": true,
+        "gridFits": true,
+        "panelFits": true,
+        "dialogFits": true,
+        "controlsFit": true,
+        "overflow": false
+      },
+      {
+        "screen": "confirm",
+        "pageFits": true,
+        "gridFits": true,
+        "panelFits": true,
+        "dialogFits": true,
+        "controlsFit": true,
+        "overflow": false
+      },
+      {
+        "screen": "game-over",
+        "pageFits": true,
+        "gridFits": true,
+        "panelFits": true,
+        "dialogFits": true,
+        "controlsFit": true,
+        "overflow": false
+      },
+      {
+        "screen": "menu",
+        "pageFits": true,
+        "gridFits": true,
+        "panelFits": true,
+        "dialogFits": true,
+        "controlsFit": true,
+        "overflow": false
+      },
+      {
+        "screen": "help",
+        "pageFits": true,
+        "gridFits": true,
+        "panelFits": true,
+        "dialogFits": true,
+        "controlsFit": true,
+        "overflow": false
+      }
+    ],
+    "overflowRows": 0,
+    "pageScrollWidth": {
+      "sw": 240,
+      "sh": 282
+    }
+  }
+}

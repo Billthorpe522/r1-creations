@@ -11,6 +11,11 @@
     for (let i = 0; i < 100; i++) { if (!$('save-state').textContent.includes('Saving')) break; await pause(20); }
   };
   const C = window.GoldenHourCore;
+  const errors = [];
+  window.addEventListener('error', event => errors.push('error: ' + event.message));
+  window.addEventListener('unhandledrejection', event => errors.push('rejection: ' + event.reason));
+  const realError = console.error.bind(console);
+  console.error = (...args) => { errors.push('console: ' + args.map(String).join(' ')); realError(...args); };
   const location = () => C.LOCATIONS.find(l => l.name === $('place-name').textContent);
   const index = () => parseInt($('day-position').textContent.split('/')[0].trim(), 10) - 1;
   const day = () => C.dayPlan(location(), C.todayLocal())[index()];
@@ -89,6 +94,23 @@
   check('Saved status is honest', $('save-state').textContent.endsWith('saved'));
   check('No page overflow', document.documentElement.scrollWidth <= 240 && document.documentElement.scrollHeight <= 282);
   check('Detail strip is inside the viewport', $('detail').getBoundingClientRect().bottom <= 282 && $('detail').getBoundingClientRect().right <= 240);
+
+  // A failing store must warn and require an explicit retry, never silently overwrite.
+  const realSetItem = localStorage.setItem.bind(localStorage);
+  localStorage.setItem = () => { throw new Error('QuotaExceededError'); };
+  emit('scrollDown');
+  await pause(80);
+  check('Save failure warns the user', $('save-state').dataset.error === 'true' && $('save-state').textContent.includes('Save again'));
+  check('Save again control appears', !$('retry-save').hidden);
+  localStorage.setItem = realSetItem;
+  click('retry-save');
+  await saved();
+  check('Save again recovers', $('save-state').textContent.endsWith('saved') && $('retry-save').hidden);
+  const recovered = C.validate(JSON.parse(atob(localStorage.getItem('golden-hour-v1'))));
+  check('Recovered state is valid', recovered.version === 1 && recovered.dayIndex === index());
+  check('No runtime errors', errors.length === 0);
+  if (errors.length) console.log('runtime errors: ' + errors.join(' | '));
+
   window.goldenHourTestResults = results;
   return { passed: results.filter(r => r.passed).length, total: results.length, results };
 })();

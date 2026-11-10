@@ -55,8 +55,8 @@
     $('app').dataset.length = String(s.sequence.length);
     $('title-panel').hidden = !title;
     grid.hidden = title;
-    text('round-label', title ? 'Memory Grid' : 'Round ' + s.round + ' of ' + C.MAX_ROUND);
-    text('progress', title ? 'Best ' + s.bestRound : s.status === 'preview' ? 'Watch' : s.status === 'gameover' ? 'Game over' : s.status === 'won' ? 'You win' : s.entered.length + ' / ' + s.sequence.length);
+    text('round-label', title ? '' : 'Round ' + s.round + ' of ' + C.MAX_ROUND);
+    text('progress', title ? 'Best round ' + s.bestRound : s.status === 'preview' ? 'Watch' : s.status === 'gameover' ? 'Game over' : s.status === 'won' ? 'You win' : s.entered.length + ' / ' + s.sequence.length);
     text('title-stats', 'Best round ' + s.bestRound + ' · ' + s.gamesPlayed + ' games played');
     $('start').hidden = !title;
     $('help-open').hidden = !title;

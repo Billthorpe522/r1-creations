@@ -9,7 +9,7 @@
   const storageName = nativeStore ? 'R1' : 'Browser';
   const store = nativeStore || { getItem: key => localStorage.getItem(key), setItem: (key, value) => localStorage.setItem(key, value) };
   const isDevice = !!(window.closeWebView || nativeStore);
-  const text = (id, value) => { $(id).textContent = value; };
+  const text = (id, value) => { const element = $(id); if (element) element.textContent = value; };
   const encode = value => btoa(JSON.stringify(value)); // State holds ASCII ids only.
   const deadline = promise => {
     let timer;
@@ -39,7 +39,7 @@
       row.setAttribute('role', 'option'); row.setAttribute('aria-selected', 'false');
       const date = document.createElement('span'); date.className = 'd'; date.textContent = C.formatDateShort(day.date);
       const times = document.createElement('span'); times.className = 't';
-      times.textContent = C.formatTime12(day.events.local.sunrise) + '  ' + C.formatTime12(day.events.local.sunset);
+      times.textContent = C.formatTime12(day.events.local.sunrise) + ' · ' + C.formatTime12(day.events.local.sunset);
       row.append(date, times);
       row.setAttribute('aria-label', C.formatDateLong(day.date) + ', sunrise ' + C.formatTime12(day.events.local.sunrise) + ', sunset ' + C.formatTime12(day.events.local.sunset));
       row.addEventListener('click', () => { if (ready && !overlay) { state.dayIndex = index; render(); save(); } });
@@ -101,7 +101,7 @@
       try {
         await deadline(store.setItem(KEY, snapshot)); savedRevision = thisRevision;
         if (savedRevision === revision) status(storageName + ' saved');
-      } catch (e) { blocked = true; status('Save failed: Save again', true); text('places-hint', e.message + '. The current plan is still in memory.'); }
+      } catch (e) { blocked = true; status('Save failed: Save again', true); text('places-hint', e.message + '. The current plan is still in memory.'); render(); }
     });
     return queue;
   }

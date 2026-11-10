@@ -1,0 +1,76 @@
+{
+  "suite": "reload-resume",
+  "storage": "browser localStorage emulation",
+  "note": "Real page reload in a desktop browser. Native creationStorage path is not exercised on desktop.",
+  "beforeReload": {
+    "seq": [
+      4,
+      2,
+      4
+    ],
+    "entered": "1"
+  },
+  "afterReload": [
+    {
+      "name": "Reopen restores the player turn",
+      "passed": true
+    },
+    {
+      "name": "Reopen restores the round",
+      "passed": true
+    },
+    {
+      "name": "Reopen restores the entered prefix",
+      "passed": true
+    },
+    {
+      "name": "Reopen restores the puzzle length",
+      "passed": true
+    },
+    {
+      "name": "Reopen does not rewrite the stored value",
+      "passed": true
+    },
+    {
+      "name": "Restored puzzle can be completed",
+      "passed": true
+    },
+    {
+      "name": "Next round grew the sequence",
+      "passed": true
+    },
+    {
+      "name": "Next round previewed before input",
+      "passed": true
+    }
+  ],
+  "corruptSaveRecovery": [
+    {
+      "name": "Corrupt base64 save falls back to a fresh game",
+      "passed": true,
+      "state": {
+        "phase": "title",
+        "saveStatus": "Load failed: Menu > Save again",
+        "storedValueUntouched": true
+      }
+    },
+    {
+      "name": "Stale version save falls back to a fresh game",
+      "passed": true,
+      "state": {
+        "phase": "title",
+        "saveStatus": "Load failed: Menu > Save again",
+        "storedValueUntouched": true
+      }
+    },
+    {
+      "name": "Invalid tile save falls back to a fresh game",
+      "passed": true,
+      "state": {
+        "phase": "title",
+        "saveStatus": "Load failed: Menu > Save again",
+        "storedValueUntouched": true
+      }
+    }
+  ]
+}
